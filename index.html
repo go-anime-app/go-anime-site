@@ -1,241 +1,93 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Go Anime</title>
+  <meta charset="UTF-8">
+  <title>Go Anime</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-    margin: 0;
-    font-family: Tahoma, Arial, sans-serif;
-    background-color: #555555;
-    color: #ffffff;
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-}
-
-/* ===== Header ===== */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 20px;
-}
-
-.logo img {
-    height: 55px;
-}
-
-/* ===== Social Icons ===== */
-.social {
-    display: flex;
-    gap: 12px;
-}
-
-.social a {
-    background: none;
-    padding: 0;
-}
-
-.social img {
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.social img:hover {
-    transform: scale(1.15);
-    opacity: 0.85;
-}
-
-/* ===== Hero ===== */
-.hero {
-    text-align: center;
-    margin-top: 70px;
-}
-
-.hero h1 {
-    font-size: 34px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    line-height: 1.9;
-    max-width: 800px;
-    margin: auto;
-    opacity: 0.95;
-}
-
-.buttons {
-    margin-top: 35px;
-}
-
-.buttons a {
-    display: inline-block;
-    margin: 10px;
-    padding: 15px 28px;
-    background: #ffffff;
-    color: #000;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.buttons a:hover {
-    transform: translateY(-3px);
-    background: #e6e6e6;
-}
-
-/* ===== Features ===== */
-.features {
-    margin-top: 90px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-}
-
-.feature {
-    background: rgba(255,255,255,0.12);
-    padding: 25px;
-    border-radius: 14px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.feature:hover {
-    transform: translateY(-5px);
-    background: rgba(255,255,255,0.18);
-}
-
-.feature h3 {
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-
-/* ===== Footer ===== */
-.footer {
-    margin-top: 90px;
-    text-align: center;
-    padding: 25px;
-    font-size: 14px;
-    border-top: 1px solid rgba(255,255,255,0.3);
-    opacity: 0.85;
-}
-
-/* ===== Mobile ===== */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #555555;
+      color: #ffffff;
+      text-align: center;
     }
 
-    .hero {
-        margin-top: 40px;
+    h1 {
+      margin-top: 40px;
+      font-size: 36px;
     }
 
-    .hero h1 {
-        font-size: 26px;
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
     }
 
-    .hero p {
-        font-size: 16px;
-        padding: 0 10px;
+    .buttons {
+      margin-bottom: 40px;
     }
 
     .buttons a {
-        width: 90%;
-        max-width: 300px;
-        display: block;
-        margin: 10px auto;
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      background-color: #ffffff;
+      color: #000000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
     }
 
-    .logo img {
-        height: 48px;
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
     }
-}
-</style>
+
+    .social-links img {
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+    }
+
+    footer {
+      font-size: 14px;
+      margin-bottom: 20px;
+      opacity: 0.8;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+  <h1>حمل تطبيق Go Anime</h1>
 
-    <!-- Header -->
-    <div class="header">
-        <div class="logo">
-            <img src="logo.png" alt="Go Anime">
-            <strong>Go Anime</strong>
-        </div>
+  <p>حمل الآن واستمتع بمشاهدة مسلسلات وأفلام الأنمي المترجمة</p>
 
-        <div class="social">
-            <a href="https://www.facebook.com/goanimeapp" target="_blank">
-                <img src="https://drive.google.com/uc?export=view&id=1VQbSAa9g7LmcndYejL-WTdlXXN6aYxVy" alt="Facebook">
-            </a>
+  <div class="buttons">
+    <a href="#" target="_blank">تحميل التطبيق</a>
+    <a href="#" target="_blank">تحديث التطبيق</a>
+  </div>
 
-            <a href="https://www.instagram.com/goanimeapp" target="_blank">
-                <img src="https://drive.google.com/uc?export=view&id=1Rws4GNgS5nq8JqxNWglNRc01xEJ_id8W" alt="Instagram">
-            </a>
+  <div class="social-links">
+    <a href="https://www.facebook.com/goanimeapp" target="_blank">
+      <img src="images/facebook.png" alt="Facebook">
+    </a>
 
-            <a href="https://t.me/goanimeapp" target="_blank">
-                <img src="https://drive.google.com/uc?export=view&id=1LMCVagJoY6t0WIrGcqN5wIx5aGJkcX0f" alt="Telegram">
-            </a>
-        </div>
-    </div>
+    <a href="https://www.instagram.com/goanimeapp" target="_blank">
+      <img src="images/instagram.png" alt="Instagram">
+    </a>
 
-    <!-- Hero -->
-    <div class="hero">
-        <h1>حمل تطبيق Go Anime</h1>
-        <p>
-            حمل الآن واستمتع بمشاهدة مسلسلات وأفلام الأنمي المترجمة
-            بجودة عالية وتجربة استخدام سلسة وممتعة على هاتفك.
-        </p>
+    <a href="https://t.me/goanimeapp" target="_blank">
+      <img src="images/telegram.png" alt="Telegram">
+    </a>
+  </div>
 
-        <div class="buttons">
-            <a href="#">⬇️ تحميل التطبيق</a>
-            <a href="#">🔄 تحديث التطبيق</a>
-        </div>
-    </div>
-    <!-- Features -->
-    <div class="features">
-        <div class="feature">
-            <h3>📺 مسلسلات وأفلام أنمي</h3>
-            <p>قائمة ضخمة من أحدث وأشهر أعمال الأنمي المترجمة</p>
-        </div>
-
-        <div class="feature">
-            <h3>⚡ حلقات مستمرة</h3>
-            <p>إضافة الحلقات الجديدة فور صدورها</p>
-        </div>
-
-        <div class="feature">
-            <h3>📩 إمكانية طلب أنمي</h3>
-            <p>يمكنك طلب مسلسلات وأفلام الأنمي وسيتم إضافتها بسرعة</p>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        تواصل معنا عبر الإيميل<br>
-        © 2026 Go Anime
-    </div>
-
-</div>
+  <footer>
+    © 2026 Go Anime. All rights reserved.
+  </footer>
 
 </body>
 </html>
