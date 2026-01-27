@@ -1,78 +1,179 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>Go Anime - تحميل التطبيق</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Go Anime</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Tahoma, Arial;
+}
+
+body{
+    background:#555555;
+    color:#fff;
+    text-align:center;
+}
+
+/* HERO */
+.hero{
+    padding:70px 20px;
+}
+
+.hero h1{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:600px;
+    margin:auto;
+    opacity:.9;
+}
+
+/* BUTTONS */
+.buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 30px;
+    border-radius:10px;
+    text-decoration:none;
+    font-size:16px;
+    transition:.3s;
+}
+
+.btn-download{
+    background:#fff;
+    color:#333;
+}
+
+.btn-update{
+    border:2px solid #fff;
+    color:#fff;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* FEATURES */
+.features{
+    background:#4a4a4a;
+    padding:60px 20px;
+}
+
+.features h2{
+    margin-bottom:40px;
+    font-size:28px;
+}
+
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    max-width:900px;
+    margin:auto;
+}
+
+.feature{
+    background:#5f5f5f;
+    padding:25px;
+    border-radius:15px;
+}
+
+/* SOCIAL */
+.social{
+    padding:50px 20px;
+}
+
+.social h2{
+    margin-bottom:25px;
+}
+
+.social-icons{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+.social-icons img{
+    width:55px;
+    transition:.3s;
+}
+
+.social-icons img:hover{
+    transform:scale(1.2);
+}
+
+/* FOOTER */
+footer{
+    background:#444;
+    padding:20px;
+    font-size:14px;
+    opacity:.9;
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>حمل تطبيق <span>Go Anime</span></h1>
-        <p>
-            حمل الآن واستمتع بمشاهدة مسلسلات وأفلام الأنمي المترجمة
-            بجودة عالية وتجربة سلسة
-        </p>
+<section class="hero">
+    <h1>حمل تطبيق Go Anime</h1>
+    <p>
+        حمل الآن واستمتع بمشاهدة مسلسلات وأفلام الأنمي المترجمة
+        بجودة عالية وتجربة سلسة
+    </p>
 
-        <div class="buttons">
-            <a href="#" class="btn primary">تحميل التطبيق</a>
-            <a href="#" class="btn secondary">تحديث التطبيق</a>
-        </div>
-    </section>
+    <div class="buttons">
+        <a href="#" class="btn btn-download">تحميل التطبيق</a>
+        <a href="#" class="btn btn-update">تحديث التطبيق</a>
+    </div>
+</section>
 
-    <!-- Features -->
-    <section class="features">
-        <h2>لماذا Go Anime؟</h2>
+<section class="features">
+    <h2>مميزات التطبيق</h2>
 
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>🎬 مكتبة ضخمة</h3>
-                <p>آلاف مسلسلات وأفلام الأنمي المحدثة باستمرار</p>
-            </div>
+    <div class="features-grid">
+        <div class="feature">🎬 مكتبة أنمي ضخمة ومحدثة باستمرار</div>
+        <div class="feature">🌍 ترجمة عربية احترافية</div>
+        <div class="feature">⚡ سرعة تشغيل بدون تقطيع</div>
+        <div class="feature">🔔 إشعارات للحلقات الجديدة</div>
+    </div>
+</section>
 
-            <div class="feature-card">
-                <h3>🌍 ترجمة عربية</h3>
-                <p>ترجمة احترافية ودقيقة لجميع الأعمال</p>
-            </div>
+<section class="social">
+    <h2>تابعنا على</h2>
 
-            <div class="feature-card">
-                <h3>⚡ سرعة وأداء</h3>
-                <p>تشغيل سريع بدون تقطيع أو إعلانات مزعجة</p>
-            </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/goanimeapp" target="_blank">
+            <img src="images/facebook.png">
+        </a>
 
-            <div class="feature-card">
-                <h3>🔔 إشعارات</h3>
-                <p>تنبيه فوري عند نزول الحلقات الجديدة</p>
-            </div>
-        </div>
-    </section>
+        <a href="https://www.instagram.com/goanimeapp" target="_blank">
+            <img src="images/instagram.png">
+        </a>
 
-    <!-- Social Media -->
-    <section class="social">
-        <h2>تابعنا على</h2>
+        <a href="https://t.me/goanimeapp" target="_blank">
+            <img src="images/telegram.png">
+        </a>
+    </div>
+</section>
 
-        <div class="social-icons">
-            <a href="https://www.facebook.com/goanimeapp" target="_blank">
-                <img src="images/facebook.png" alt="Facebook">
-            </a>
-
-            <a href="https://www.instagram.com/goanimeapp" target="_blank">
-                <img src="images/instagram.png" alt="Instagram">
-            </a>
-
-            <a href="https://t.me/goanimeapp" target="_blank">
-                <img src="images/telegram.png" alt="Telegram">
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Go Anime. All rights reserved.</p>
-        <p>تواصل معنا عبر الإيميل</p>
-    </footer>
+<footer>
+    © 2026 Go Anime. All rights reserved.<br>
+    تواصل معنا عبر الإيميل
+</footer>
 
 </body>
 </html>
