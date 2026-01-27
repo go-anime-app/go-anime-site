@@ -1,4 +1,217 @@
-<!-- Features -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Go Anime</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    background-color: #555555;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ===== Header ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+}
+
+.logo img {
+    height: 55px;
+}
+
+/* ===== Social Icons ===== */
+.social {
+    display: flex;
+    gap: 12px;
+}
+
+.social a {
+    background: none;
+    padding: 0;
+}
+
+.social img {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.social img:hover {
+    transform: scale(1.15);
+    opacity: 0.85;
+}
+
+/* ===== Hero ===== */
+.hero {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.hero h1 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.9;
+    max-width: 800px;
+    margin: auto;
+    opacity: 0.95;
+}
+
+.buttons {
+    margin-top: 35px;
+}
+
+.buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 28px;
+    background: #ffffff;
+    color: #000;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.buttons a:hover {
+    transform: translateY(-3px);
+    background: #e6e6e6;
+}
+
+/* ===== Features ===== */
+.features {
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.feature {
+    background: rgba(255,255,255,0.12);
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.18);
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* ===== Footer ===== */
+.footer {
+    margin-top: 90px;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    opacity: 0.85;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero {
+        margin-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .buttons a {
+        width: 90%;
+        max-width: 300px;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .logo img {
+        height: 48px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Go Anime">
+            <strong>Go Anime</strong>
+        </div>
+
+        <div class="social">
+            <a href="https://www.facebook.com/goanimeapp" target="_blank">
+                <img src="https://drive.google.com/uc?export=view&id=1VQbSAa9g7LmcndYejL-WTdlXXN6aYxVy" alt="Facebook">
+            </a>
+
+            <a href="https://www.instagram.com/goanimeapp" target="_blank">
+                <img src="https://drive.google.com/uc?export=view&id=1Rws4GNgS5nq8JqxNWglNRc01xEJ_id8W" alt="Instagram">
+            </a>
+
+            <a href="https://t.me/goanimeapp" target="_blank">
+                <img src="https://drive.google.com/uc?export=view&id=1LMCVagJoY6t0WIrGcqN5wIx5aGJkcX0f" alt="Telegram">
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>حمل تطبيق Go Anime</h1>
+        <p>
+            حمل الآن واستمتع بمشاهدة مسلسلات وأفلام الأنمي المترجمة
+            بجودة عالية وتجربة استخدام سلسة وممتعة على هاتفك.
+        </p>
+
+        <div class="buttons">
+            <a href="#">⬇️ تحميل التطبيق</a>
+            <a href="#">🔄 تحديث التطبيق</a>
+        </div>
+    </div>
+    <!-- Features -->
     <div class="features">
         <div class="feature">
             <h3>📺 مسلسلات وأفلام أنمي</h3>
