@@ -23,12 +23,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    font-size: 20px;
 }
 
 .logo img {
@@ -36,67 +39,91 @@ body {
 }
 
 .social a {
-    margin: 0 5px;
+    margin: 0 4px;
     padding: 8px 14px;
     border-radius: 6px;
     background: #ffffff;
     color: #000;
     text-decoration: none;
     font-size: 14px;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    background: #e0e0e0;
 }
 
 .hero {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 70px;
 }
 
 .hero h1 {
-    font-size: 32px;
+    font-size: 34px;
     margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 18px;
-    line-height: 1.8;
+    line-height: 1.9;
     max-width: 800px;
     margin: auto;
+    opacity: 0.95;
 }
 
 .buttons {
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 .buttons a {
     display: inline-block;
     margin: 10px;
-    padding: 14px 26px;
+    padding: 15px 28px;
     background: #ffffff;
     color: #000;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
+}
+
+.buttons a:hover {
+    transform: translateY(-3px);
+    background: #e6e6e6;
 }
 
 .features {
-    margin-top: 80px;
+    margin-top: 90px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 .feature {
-    background: rgba(255,255,255,0.1);
-    padding: 20px;
-    border-radius: 10px;
+    background: rgba(255,255,255,0.12);
+    padding: 25px;
+    border-radius: 14px;
     text-align: center;
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.18);
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .footer {
-    margin-top: 80px;
+    margin-top: 90px;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     font-size: 14px;
     border-top: 1px solid rgba(255,255,255,0.3);
+    opacity: 0.85;
 }
 </style>
 </head>
@@ -122,29 +149,29 @@ body {
         <h1>حمل تطبيق Go Anime</h1>
         <p>
             حمل الآن واستمتع بمشاهدة مسلسلات وأفلام الأنمي المترجمة
-            بجودة عالية وتجربة استخدام سلسة على هاتفك.
+            بجودة عالية وتجربة استخدام سلسة وممتعة على هاتفك.
         </p>
 
         <div class="buttons">
-            <a href="#">تحميل التطبيق</a>
-            <a href="#">تحديث التطبيق</a>
+            <a href="#">⬇️ تحميل التطبيق</a>
+            <a href="#">🔄 تحديث التطبيق</a>
         </div>
     </div>
 
     <div class="features">
         <div class="feature">
-            <h3>مكتبة ضخمة</h3>
-            <p>آلاف مسلسلات وأفلام الأنمي المترجمة</p>
+            <h3>📚 مكتبة ضخمة</h3>
+            <p>آلاف مسلسلات وأفلام الأنمي المترجمة باستمرار</p>
         </div>
 
         <div class="feature">
-            <h3>جودة عالية</h3>
-            <p>مشاهدة بدون تقطيع وبأفضل جودة</p>
+            <h3>🎥 جودة عالية</h3>
+            <p>مشاهدة بدون تقطيع وبأفضل جودة ممكنة</p>
         </div>
 
         <div class="feature">
-            <h3>تحديثات مستمرة</h3>
-            <p>إضافة حلقات وأعمال جديدة باستمرار</p>
+            <h3>⚡ تحديثات مستمرة</h3>
+            <p>إضافة حلقات وأعمال جديدة أولاً بأول</p>
         </div>
     </div>
 
