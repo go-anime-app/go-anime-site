@@ -1,23 +1,218 @@
-<div class="feature">
-            <div class="icon">🚀</div>
-            <h3>أداء سريع وتجربة سلسة</h3>
-            <p>واجهة أنيقة وسهلة الاستخدام مع سرعة تشغيل عالية وتنقل مرن داخل التطبيق.</p>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Go Anime</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background-color: #555555;
+    color: #ffffff;
+}
+
+/* ===== Layout ===== */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ===== Header ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.social {
+    display: flex;
+    gap: 12px;
+}
+
+.social img {
+    width: 36px;
+    background: #fff;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+/* ===== Hero ===== */
+.hero {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: auto;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.buttons a {
+    display: inline-block;
+    background: #ffffff;
+    color: #000;
+    padding: 14px 30px;
+    border-radius: 12px;
+    margin: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== Features ===== */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 80px;
+}
+
+.feature {
+    background: rgba(255,255,255,0.15);
+    padding: 25px 20px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.feature span {
+    font-size: 36px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ===== Footer ===== */
+.footer {
+    text-align: center;
+    font-size: 14px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+/* ===== Mobile Fix ===== */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <img src="images/logo.png">
+            <strong>Go Anime</strong>
+        </div>
+
+        <div class="social">
+            <a href="#"><img src="images/facebook.png"></a>
+            <a href="#"><img src="images/instagram.png"></a>
+            <a href="#"><img src="images/telegram.png"></a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>حمل تطبيق Go Anime</h1>
+        <p>
+            مكتبة أنمي ضخمة تضم آلاف المسلسلات والأفلام المترجمة،
+            مع تجربة مشاهدة سريعة وجودة عالية بدون تعقيد.
+        </p>
+
+        <div class="buttons">
+            <a href="#">تحميل التطبيق</a>
+            <a href="#">تحديث التطبيق</a>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="features">
+
+        <div class="feature">
+            <span>🎬</span>
+            <h3>مكتبة ضخمة</h3>
+            <p>آلاف مسلسلات وأفلام الأنمي المترجمة بجميع التصنيفات.</p>
         </div>
 
         <div class="feature">
-            <div class="icon">⬇️</div>
-            <h3>تحميل بدون إنترنت</h3>
-            <p>حمّل الحلقات وشاهدها في أي وقت بدون الحاجة إلى اتصال بالإنترنت.</p>
+            <span>⚡</span>
+            <h3>تحديث فوري</h3>
+            <p>إضافة الحلقات الجديدة فور صدورها بدون تأخير.</p>
         </div>
 
         <div class="feature">
-            <div class="icon">💬</div>
-            <h3>اطلب أنميك المفضل</h3>
-            <p>اطلب أي مسلسل أو فيلم أنمي تريده وسيتم إضافته بأسرع وقت ممكن.</p>
+            <span>📺</span>
+            <h3>جودة عالية</h3>
+            <p>مشاهدة بجودات متعددة تناسب كل سرعات الإنترنت.</p>
+        </div>
+
+        <div class="feature">
+            <span>🚀</span>
+            <h3>أداء سريع</h3>
+            <p>واجهة بسيطة وسريعة تضمن تجربة استخدام مريحة.</p>
+        </div>
+
+        <div class="feature">
+            <span>⬇️</span>
+            <h3>تحميل الحلقات</h3>
+            <p>إمكانية تحميل الحلقات ومشاهدتها بدون إنترنت.</p>
+        </div>
+
+        <div class="feature">
+            <span>💬</span>
+            <h3>اطلب أنميك</h3>
+            <p>اطلب أي أنمي وسيتم إضافته بأسرع وقت ممكن.</p>
         </div>
 
     </div>
-
     <!-- Footer -->
     <div class="footer">
         تواصل معنا عبر الإيميل<br>
