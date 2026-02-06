@@ -463,5 +463,41 @@ img.onload=()=>img.style.opacity="1";
 
 })();
 </script>
+  <script>
+(function(){
+  const shots=[
+    "images/screen-home.jpg",
+    "images/screen-search.jpg",
+    "images/screen-player.jpg",
+    "images/screen-details.jpg",
+    "images/screen-download.jpg"
+  ];
+
+  const img=document.getElementById("phoneShot");
+  if(!img) return;
+
+  const dots=document.querySelectorAll(".phone-dots span");
+  let i=0;
+
+  function setDot(n){
+    dots.forEach((d,x)=>d.classList.toggle("active",x===n));
+  }
+
+  // البداية
+  img.src = shots[0];
+  setDot(0);
+
+  // تغيير تلقائي
+  setInterval(()=>{
+    i=(i+1)%shots.length;
+    img.style.opacity="0";
+    setTimeout(()=>{
+      img.src=shots[i];
+      setDot(i);
+      img.onload=()=>img.style.opacity="1";
+    },150);
+  },3000);
+})();
+</script>
 </body>
 </html>
