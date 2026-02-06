@@ -210,6 +210,49 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
   .privacy-card h2 { font-size:26px; }
 }
 @media (max-width:480px) { .hero-text h1 { font-size:28px; } .section-title h2 { font-size:26px; } .feature-card { padding:30px 20px; } }
+  .screen-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);}
+.screen-card img{width:100%;display:block;}
+.screen-card .cap{padding:8px 10px;font-size:13px;color:#607080;text-align:center;}
+
+.phone-wrap{display:flex;justify-content:center;}
+.phone{
+  width:260px;
+  height:520px;
+  border-radius:36px;
+  background:#0f141a;
+  padding:12px;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+.phone-screen{
+  width:100%;
+  height:100%;
+  border-radius:28px;
+  overflow:hidden;
+  background:#000;
+}
+.phone-screen img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:opacity .25s ease;
+}
+
+.phone-dots{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-top:10px;
+}
+.phone-dots span{
+  width:8px;height:8px;border-radius:50%;
+  background:#cfd6df;
+}
+.phone-dots span.active{background:var(--accent-color);}
+
+@media(max-width:900px){
+  .screens-layout{grid-template-columns:1fr;}
+  .phone{margin-top:25px;}
+}
 </style>
 </head>
 <body>
@@ -268,6 +311,59 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
   </div>
 </section>
 
+  <!-- App Screenshots (NEW) -->
+<section class="screens-section" id="screens">
+  <div class="container">
+    <div class="screens-header">
+      <h2>لقطات من التطبيق</h2>
+      <p>شوفي شكل GO ANIME من الداخل — واجهة بسيطة، تشغيل سريع، وتجربة مشاهدة ممتعة.</p>
+    </div>
+
+    <div class="screens-layout">
+
+      <!-- Left: Grid -->
+      <div class="screens-grid">
+        <div class="screen-card">
+          <img src="images/screen-home.jpg" alt="لقطة - الصفحة الرئيسية">
+          <div class="cap">الصفحة الرئيسية</div>
+        </div>
+        <div class="screen-card">
+          <img src="images/screen-search.jpg" alt="لقطة - البحث">
+          <div class="cap">البحث</div>
+        </div>
+        <div class="screen-card">
+          <img src="images/screen-player.jpg" alt="لقطة - المشاهدة">
+          <div class="cap">المشاهدة</div>
+        </div>
+        <div class="screen-card">
+          <img src="images/screen-details.jpg" alt="لقطة - تفاصيل الأنمي">
+          <div class="cap">تفاصيل الأنمي</div>
+        </div>
+        <div class="screen-card">
+          <img src="images/screen-download.jpg" alt="لقطة - التحميل">
+          <div class="cap">التحميل</div>
+        </div>
+      </div>
+
+      <!-- Right: Phone Mockup -->
+      <div class="phone-wrap">
+        <div>
+          <div class="phone" aria-label="عرض لقطات التطبيق داخل إطار هاتف">
+            <div class="phone-screen">
+              <img id="phoneShot" src="images/screen-home.jpg" alt="لقطة التطبيق داخل إطار هاتف">
+            </div>
+          </div>
+
+          <div class="phone-dots" aria-hidden="true">
+            <span class="active"></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  
 <!-- Features -->
 <section class="features-section" id="features">
   <div class="container">
