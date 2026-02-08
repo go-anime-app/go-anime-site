@@ -4,12 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ✅ SEO Improvements (Added - without removing anything) -->
-<meta name="theme-color" content="#2C3E50">
-<meta name="language" content="ar">
-<meta http-equiv="Content-Language" content="ar">
-<link rel="alternate" hreflang="ar" href="https://www.go-anime-app.com/">
-
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4V0BHXEE35"></script>
 <script>
@@ -82,18 +76,6 @@
     "https://www.instagram.com/goanimeapp",
     "https://t.me/goanimeapp"
   ]
-}
-</script>
-
-<!-- ✅ Additional Schema (Added - without removing anything) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "GO ANIME",
-  "url": "https://www.go-anime-app.com/",
-  "inLanguage": "ar",
-  "description": "تحميل تطبيق GO ANIME لمشاهدة مسلسلات وأفلام الأنمي المترجمة بجودة عالية."
 }
 </script>
 
@@ -176,19 +158,12 @@ a { text-decoration:none; }
 .features-section { padding:80px 0; background:var(--light-bg); }
 .section-title { text-align:center; margin-bottom:60px; }
 .section-title h2 { font-size:42px; font-weight:900; color:var(--text-dark); margin-bottom:15px; }
-.section-title p { max-width:900px; margin:0 auto; color:#607080; font-size:16px; line-height:1.9; }
 .features-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:40px; }
 .feature-card { background:var(--feature-gray); padding:40px 30px; border-radius:20px; text-align:center; box-shadow:var(--shadow-sm); transition:0.4s; cursor:pointer; color:#fff; }
 .feature-card:hover { transform:translateY(-10px); box-shadow:0 8px 32px rgba(0,0,0,0.2); }
 .feature-icon { width:80px; height:80px; margin:0 auto 25px; background:#fff; border-radius:20px; display:flex; align-items:center; justify-content:center; color:var(--feature-gray); font-size:36px; font-weight:bold; }
 .feature-card h3 { font-size:24px; font-weight:800; margin-bottom:15px; }
 .feature-card p { font-size:16px; line-height:1.8; }
-
-/* ✅ Top Anime (Uses same feature-card frame for perfect consistency) */
-.anime-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:40px; }
-.anime-title { margin-bottom:10px; }
-.anime-title .en { display:block; font-size:20px; font-weight:900; margin-bottom:6px; direction:ltr; unicode-bidi:bidi-override; }
-.anime-title .ar { display:block; font-size:16px; font-weight:800; opacity:0.95; }
 
 /* Download Section */
 .download-section { padding:80px 0; background:linear-gradient(135deg,#2C3E50 0%,#34495E 100%); color:#fff; text-align:center; }
@@ -228,7 +203,7 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
 @media (max-width:768px) {
   .menu-toggle { display:flex; }
   .nav-menu { flex-direction:column; max-height:0; overflow:hidden; transition:0.3s; }
-  .nav-menu.active { max-height:520px; }
+  .nav-menu.active { max-height:420px; }
   .nav-menu li { border-bottom:1px solid #E0E4E8; padding:12px 0; }
   .hero-buttons, .download-buttons { flex-direction:column; }
   .btn { width:100%; justify-content:center; }
@@ -304,6 +279,46 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
   .screens-layout{grid-template-columns:1fr;}
   .phone{margin-top:25px;}
 }
+/* ===== Top Anime Grid polish (no icons, tighter spacing, equal height, better typography) ===== */
+#top-anime .feature-icon{
+  display:none !important;
+}
+
+/* Make cards the same height (clean grid) */
+#top-anime .feature-card{
+  padding-top:22px;
+  display:flex;
+  flex-direction:column;
+  min-height:230px;
+}
+
+/* Tight spacing above titles */
+#top-anime .anime-title{
+  margin-top:0 !important;
+  margin-bottom:10px;
+}
+
+/* Bigger English title */
+#top-anime .anime-title .en{
+  font-size:22px;
+}
+
+/* Lighter Arabic title */
+#top-anime .anime-title .ar{
+  color:rgba(255,255,255,0.82);
+  font-weight:700;
+}
+
+/* Keep descriptions aligned (same visible lines) */
+#top-anime .feature-card p{
+  margin-top:8px;
+  flex-grow:1;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+/* ===== End Top Anime polish ===== */
 </style>
 </head>
 <body>
@@ -315,10 +330,6 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
     <ul class="nav-menu" id="navMenu">
       <li><a href="#home" class="active">الرئيسية</a></li>
       <li><a href="#features">المميزات</a></li>
-
-      <!-- ✅ Added: Top Anime link -->
-      <li><a href="#top-anime">أقوى مسلسلات الأنمي</a></li>
-
       <li><a href="#download">التنزيل</a></li>
       <!-- GOLDEN SOLUTION: link to standalone page -->
       <li><a href="/privacy-policy.html">سياسة الخصوصية</a></li>
@@ -332,15 +343,8 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
   <div class="container">
     <div class="hero-content">
       <div class="hero-text">
-        <!-- ✅ Improved H1 -->
-        <h1>تحميل تطبيق جو انمي GO ANIME للأندرويد</h1>
-
-        <!-- ✅ Added real SEO content -->
-        <p>أفضل تطبيق لمشاهدة مسلسلات وأفلام الأنمي المترجمة بجودة عالية وتحديث مستمر</p>
-        <p style="font-size:15px;opacity:0.92;margin-top:-18px;margin-bottom:35px;">
-          يقدم GO ANIME تجربة أنمي مميزة بواجهة بسيطة، تشغيل سريع، وجودات متعددة، مع مكتبة أنمي ضخمة تشمل أشهر الأعمال.
-        </p>
-
+        <h1>تحميل تطبيق جو انمي</h1>
+        <p>أفضل تطبيق لمشاهدة مسلسلات وأفلام الانمي المترجمة</p>
         <div class="hero-buttons">
           <a href="https://www.xgtimayfsa.com/download/go_anime_v1.apk" class="btn btn-primary">⬇️ تحميل التطبيق</a>
           <a href="https://www.xgtimayfsa.com/download/go_anime_v1.apk" class="btn btn-secondary">🔄 تحديث التطبيق</a>
@@ -381,10 +385,13 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
     </div>
 
     <div class="screens-layout">
+
+      <!-- Right: Phone Mockup -->
       <div class="phone-wrap">
         <div>
           <div class="phone" aria-label="عرض لقطات التطبيق داخل إطار هاتف">
             <div class="phone-screen">
+              <!-- Performance: lazy + async decode (no visual change) -->
               <img id="phoneShot" loading="lazy" decoding="async" src="images/screen-home.jpg" alt="لقطة التطبيق داخل إطار هاتف">
             </div>
           </div>
@@ -394,6 +401,7 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -401,13 +409,7 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
 <!-- Features -->
 <section class="features-section" id="features">
   <div class="container">
-    <div class="section-title">
-      <h2>مميزات تطبيق جو انمي</h2>
-      <p>
-        تم تصميم تطبيق GO ANIME ليقدم تجربة أنمي مريحة وسريعة، مع مكتبة أنمي ضخمة من المسلسلات والأفلام المترجمة،
-        وميزات تساعدك على متابعة الأنمي المفضل بسهولة، وتحميل الأنمي للمشاهدة لاحقًا بدون إنترنت.
-      </p>
-    </div>
+    <div class="section-title"><h2>مميزات تطبيق جو انمي</h2></div>
     <div class="features-grid">
       <div class="feature-card"><div class="feature-icon">🎬</div><h3>مكتبة أنمي ضخمة</h3><p>آلاف مسلسلات وأفلام الأنمي المترجمة بتنوع يناسب جميع الأذواق</p></div>
       <div class="feature-card"><div class="feature-icon">⏱️</div><h3>حلقات فور صدورها</h3><p>إضافة حلقات الانمي الجديدة مباشرة بعد صدورها بدون تأخير</p></div>
@@ -415,324 +417,6 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
       <div class="feature-card"><div class="feature-icon">🖥️</div><h3>واجهة بسيطة</h3><p>تصميم أنيق وسهل الاستخدام للوصول السريع لمسلسلات والافلام الانمي</p></div>
       <div class="feature-card"><div class="feature-icon">⬇️</div><h3>تحميل الحلقات</h3><p>تحميل حلقات وافلام الانمي ومشاهدتها لاحقًا بدون إنترنت</p></div>
       <div class="feature-card"><div class="feature-icon">📝</div><h3>طلب الأنمي</h3><p>اطلب أي مسلسل أنمي وسيتم إضافته بأسرع وقت ممكن</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ✅ NEW: Top 50 Anime Section (Series ONLY) -->
-<section class="features-section" id="top-anime">
-  <div class="container">
-    <div class="section-title">
-      <h2>أقوى مسلسلات الأنمي تجدونها في تطبيق GO ANIME</h2>
-      <p>
-        يضم تطبيق GO ANIME مكتبة أنمي ضخمة من أشهر مسلسلات الأنمي المترجمة، تشمل أنمي الأكشن والفانتازيا والدراما والرياضة.
-        فيما يلي قائمة أقوى 50 مسلسل أنمي مع وصف مختصر لكل أنمي لتقوية الظهور في نتائج البحث.
-      </p>
-    </div>
-
-    <div class="anime-grid">
-
-      <div class="feature-card"><div class="feature-icon">📺</div>
-        <h3 class="anime-title"><span class="en">Attack on Titan</span><span class="ar">هجوم العمالقة</span></h3>
-        <p>انمي يتحدث عن حرب بقاء ضد عمالقة، أسرار عالمية، وتحولات صادمة ترفع الإثارة دائمًا.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🏴‍☠️</div>
-        <h3 class="anime-title"><span class="en">One Piece</span><span class="ar">ون بيس</span></h3>
-        <p>انمي يتحدث عن مغامرة قراصنة طويلة، عالم واسع، صداقات قوية، وحلم كنز لا ينتهي.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🥷</div>
-        <h3 class="anime-title"><span class="en">Naruto Shippuden</span><span class="ar">ناروتو شيبودن</span></h3>
-        <p>انمي يتحدث عن نينجا يسعى للاعتراف، معارك قوية، تطور شخصيات، وإرادة لا تنكسر.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">⚔️</div>
-        <h3 class="anime-title"><span class="en">Demon Slayer</span><span class="ar">قاتل الشياطين</span></h3>
-        <p>انمي يتحدث عن صائد شياطين ينقذ عائلته، قتال مذهل، ومشاهد فنية عالية الجودة.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">📓</div>
-        <h3 class="anime-title"><span class="en">Death Note</span><span class="ar">مذكرة الموت</span></h3>
-        <p>انمي يتحدث عن دفتر يقتل بالأسماء، صراع عقول، خداع عبقري، وتوتر نفسي مستمر.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">⚗️</div>
-        <h3 class="anime-title"><span class="en">Fullmetal Alchemist: Brotherhood</span><span class="ar">الخيميائي المعدني: الأخوة</span></h3>
-        <p>انمي يتحدث عن أخوين بالخيمياء، رحلة فداء، عالم متكامل، ورسائل إنسانية عميقة جدًا.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🐉</div>
-        <h3 class="anime-title"><span class="en">Dragon Ball Z</span><span class="ar">دراغون بول زد</span></h3>
-        <p>انمي يتحدث عن معارك أسطورية، خصوم أقوياء، تحولات مذهلة، وطاقة حماس لا تنتهي.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🌀</div>
-        <h3 class="anime-title"><span class="en">Jujutsu Kaisen</span><span class="ar">جوجوتسو كايسن</span></h3>
-        <p>انمي يتحدث عن لعنات قاتلة، مدرسة سحر، معارك سريعة، وشخصيات محبوبة جدًا.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🌑</div>
-        <h3 class="anime-title"><span class="en">Tokyo Ghoul</span><span class="ar">طوكيو غول</span></h3>
-        <p>انمي يتحدث عن شاب نصف غول، صراع هوية، عالم مظلم، وتحولات نفسية قوية.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🗺️</div>
-        <h3 class="anime-title"><span class="en">Hunter x Hunter</span><span class="ar">هنتر × هنتر</span></h3>
-        <p>انمي يتحدث عن مغامرات صائدين، نظام قوى مبتكر، صداقات جميلة، وأركّات لا تُنسى.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🗡️</div>
-        <h3 class="anime-title"><span class="en">Bleach</span><span class="ar">بليتش</span></h3>
-        <p>انمي يتحدث عن حاصد أرواح وسيوف، عوالم متعددة، خصوم أقوياء، وتشويق متصاعد.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🦸</div>
-        <h3 class="anime-title"><span class="en">My Hero Academia</span><span class="ar">أكاديمية بطلي</span></h3>
-        <p>انمي يتحدث عن طلاب أبطال، تدريب ومنافسة، قيم شجاعة، وتطور ملهم لكل شخصية.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🍀</div>
-        <h3 class="anime-title"><span class="en">Black Clover</span><span class="ar">بلاك كلوفر</span></h3>
-        <p>انمي يتحدث عن فتى بلا سحر، طموح كبير، فرق قتالية، وتصاعد مذهل بالقوة.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">⏳</div>
-        <h3 class="anime-title"><span class="en">Steins;Gate</span><span class="ar">شتاينز؛غيت</span></h3>
-        <p>انمي يتحدث عن سفر عبر الزمن، قرارات خطيرة، توتر متزايد، وحبكة ذكية جدًا.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">👑</div>
-        <h3 class="anime-title"><span class="en">Code Geass</span><span class="ar">كود غياس</span></h3>
-        <p>انمي يتحدث عن ثورة وخطط عبقرية، صراع سياسي، تضحيات قاسية، ونهاية أسطورية.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🎮</div>
-        <h3 class="anime-title"><span class="en">Sword Art Online</span><span class="ar">سورد آرت أونلاين</span></h3>
-        <p>انمي يتحدث عن لعبة مميتة، بقاء وتحديات، رومانسية لطيفة، ومغامرات سريعة الإيقاع.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🛡️</div>
-        <h3 class="anime-title"><span class="en">Vinland Saga</span><span class="ar">فينلاند ساغا</span></h3>
-        <p>انمي يتحدث عن فايكنغ وانتقام، نضج تدريجي، معارك واقعية، ورسالة قوية عن السلام.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">💥</div>
-        <h3 class="anime-title"><span class="en">Mob Psycho 100</span><span class="ar">موب سايكو 100</span></h3>
-        <p>انمي يتحدث عن فتى بقوى نفسية، كوميديا صادقة، قتال جميل، ونمو شخصي ملهم.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">😈</div>
-        <h3 class="anime-title"><span class="en">The Seven Deadly Sins</span><span class="ar">الخطايا السبع المميتة</span></h3>
-        <p>انمي يتحدث عن فرسان أسطوريين، قوى متنوعة، مغامرة ممتعة، وأحداث تتسارع باستمرار.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">♾️</div>
-        <h3 class="anime-title"><span class="en">Re:Zero</span><span class="ar">ري:زيرو</span></h3>
-        <p>انمي يتحدث عن عودة زمنية مؤلمة، محاولات متكررة، صدمات قاسية، وإصرار لا يتوقف.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🩸</div>
-        <h3 class="anime-title"><span class="en">Akame ga Kill!</span><span class="ar">أكامي غا كيل</span></h3>
-        <p>انمي يتحدث عن ثوار ضد طغيان، معارك دموية، خسارات موجعة، وثمن التغيير الكبير.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🧚</div>
-        <h3 class="anime-title"><span class="en">Fairy Tail</span><span class="ar">فيري تيل</span></h3>
-        <p>انمي يتحدث عن نقابة سحر وصداقات، مغامرات طويلة، كوميديا لطيفة، وروح فريق قوية.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">⚽</div>
-        <h3 class="anime-title"><span class="en">Blue Lock</span><span class="ar">بلو لوك</span></h3>
-        <p>انمي يتحدث عن مشروع مهاجم مثالي، منافسة نفسية، تدريب قاسٍ، وتطور مهارات سريع.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🪚</div>
-        <h3 class="anime-title"><span class="en">Chainsaw Man</span><span class="ar">تشينساو مان</span></h3>
-        <p>انمي يتحدث عن صائد شياطين غريب، أكشن جنوني، كوميديا سوداء، ومشاعر مفاجئة.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🧪</div>
-        <h3 class="anime-title"><span class="en">Dr. Stone</span><span class="ar">دكتور ستون</span></h3>
-        <p>انمي يتحدث عن إحياء الحضارة بالعلم، اختراعات ذكية، تحديات مستمرة، ومغامرة ممتعة.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">⏱️</div>
-        <h3 class="anime-title"><span class="en">Tokyo Revengers</span><span class="ar">طوكيو ريفنجرز</span></h3>
-        <p>انمي يتحدث عن سفر عبر الزمن، عصابات وشجاعة، إصلاح أخطاء، وتوتر لا يهدأ.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🧩</div>
-        <h3 class="anime-title"><span class="en">Erased</span><span class="ar">إيريسد</span></h3>
-        <p>انمي يتحدث عن غموض وزمن، إنقاذ طفولة، تحقيق مشوق، ولمسات إنسانية مؤثرة جدًا.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🦠</div>
-        <h3 class="anime-title"><span class="en">Parasyte</span><span class="ar">باراسايت</span></h3>
-        <p>انمي يتحدث عن كائنات متطفلة، صراع بقاء، أسئلة أخلاقية، وتغيرات نفسية عميقة.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🏐</div>
-        <h3 class="anime-title"><span class="en">Haikyuu!!</span><span class="ar">هايكيو!!</span></h3>
-        <p>انمي يتحدث عن كرة طائرة وحماس، فريق يتطور، منافسات قوية، وطاقة إيجابية ملهمة.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">😂</div>
-        <h3 class="anime-title"><span class="en">Gintama</span><span class="ar">غينتاما</span></h3>
-        <p>انمي يتحدث عن كوميديا ساخرة، مواقف مجنونة، قتال مفاجئ، ودراما قوية عند الحاجة.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🗡️</div>
-        <h3 class="anime-title"><span class="en">Dororo</span><span class="ar">دورورو</span></h3>
-        <p>انمي يتحدث عن استعادة جسد مسروق، شياطين ومعاناة، صداقة مؤثرة، وإخراج جميل.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">👑</div>
-        <h3 class="anime-title"><span class="en">Overlord</span><span class="ar">أوفرلورد</span></h3>
-        <p>انمي يتحدث عن حاكم قوي بعالم آخر، خطط محكمة، هيمنة، وغموض حول نواياه.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">♟️</div>
-        <h3 class="anime-title"><span class="en">No Game No Life</span><span class="ar">نو غيم نو لايف</span></h3>
-        <p>انمي يتحدث عن عالم ألعاب، تحديات منطقية، ألوان جذابة، وثنائي عبقري ممتع.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🔥</div>
-        <h3 class="anime-title"><span class="en">Fire Force</span><span class="ar">فاير فورس</span></h3>
-        <p>انمي يتحدث عن فرقة نارية خاصة، أسرار غامضة، قتال ممتع، وموسيقى حماسية جدًا.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🕳️</div>
-        <h3 class="anime-title"><span class="en">Made in Abyss</span><span class="ar">ميد إن أبيس</span></h3>
-        <p>انمي يتحدث عن هاوية خطيرة، جمال وظلام، عالم مذهل، ومشاعر قوية ومؤلمة.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🌙</div>
-        <h3 class="anime-title"><span class="en">Elfen Lied</span><span class="ar">إلفن ليد</span></h3>
-        <p>انمي يتحدث عن دراما مظلمة، ماضٍ مؤلم، عنف وانتقام، وأسئلة عن الإنسانية والرحمة.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🔍</div>
-        <h3 class="anime-title"><span class="en">Psycho-Pass</span><span class="ar">سايكو باس</span></h3>
-        <p>انمي يتحدث عن مستقبل مراقب، تحقيقات ذكية، فلسفة عميقة، وصراع بين الحرية والنظام.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🎯</div>
-        <h3 class="anime-title"><span class="en">Assassination Classroom</span><span class="ar">فصل الاغتيال</span></h3>
-        <p>انمي يتحدث عن صف غريب، معلم مميز، تدريب ممتع، ودروس حياة بنهاية مؤثرة.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">💞</div>
-        <h3 class="anime-title"><span class="en">Clannad</span><span class="ar">كلاناد</span></h3>
-        <p>انمي يتحدث عن رومانسية ودراما، عائلة ومشاعر، لحظات حزينة، وتأثير طويل الأمد.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🎻</div>
-        <h3 class="anime-title"><span class="en">Your Lie in April</span><span class="ar">كذبتك في أبريل</span></h3>
-        <p>انمي يتحدث عن موسيقى ورومانس، شفاء من ألم، لحظات جميلة، ودموع لا تُنسى.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🏫</div>
-        <h3 class="anime-title"><span class="en">Great Teacher Onizuka</span><span class="ar">المعلم العظيم أونيزوكا</span></h3>
-        <p>انمي يتحدث عن مدرس غير تقليدي، كوميديا قوية، مشاكل شباب، ودروس شجاعة بالحياة.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🎧</div>
-        <h3 class="anime-title"><span class="en">Samurai Champloo</span><span class="ar">ساموراي شامبلو</span></h3>
-        <p>انمي يتحدث عن ساموراي ومغامرة، موسيقى هيب هوب، قتال أنيق، وأجواء فريدة.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🚀</div>
-        <h3 class="anime-title"><span class="en">Cowboy Bebop</span><span class="ar">كاوبوي بيبوب</span></h3>
-        <p>انمي يتحدث عن صيادي جوائز بالفضاء، قصص عميقة، موسيقى عظيمة، ونهاية كلاسيكية.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🧠</div>
-        <h3 class="anime-title"><span class="en">Neon Genesis Evangelion</span><span class="ar">إيفانجيليون</span></h3>
-        <p>انمي يتحدث عن ميكا ونفسية، رموز كثيرة، صراع داخلي، وتأثير تاريخي كبير.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🗡️</div>
-        <h3 class="anime-title"><span class="en">Berserk</span><span class="ar">بيرسيرك</span></h3>
-        <p>انمي يتحدث عن فانتازيا مظلمة، بطل قاسٍ، معاناة طويلة، وعالم عنيف بلا رحمة.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🕵️</div>
-        <h3 class="anime-title"><span class="en">Monster</span><span class="ar">مونستر</span></h3>
-        <p>انمي يتحدث عن تشويق نفسي، جريمة وغموض، شخصيات واقعية، وأحداث متقنة جدًا.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">👑</div>
-        <h3 class="anime-title"><span class="en">Ranking of Kings</span><span class="ar">ترتيب الملوك</span></h3>
-        <p>انمي يتحدث عن أمير ضعيف ظاهريًا، شجاعة عظيمة، عالم خيالي، ومشاعر صادقة.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🪖</div>
-        <h3 class="anime-title"><span class="en">86 Eighty-Six</span><span class="ar">86</span></h3>
-        <p>انمي يتحدث عن حرب وتمييز، دراما إنسانية، معارك ميكا، ورسائل قوية مؤثرة.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🧪</div>
-        <h3 class="anime-title"><span class="en">Hell's Paradise</span><span class="ar">جنة الجحيم</span></h3>
-        <p>انمي يتحدث عن جزيرة غامضة، قتلة ومقاتلين، أسرار مرعبة، وأكشن سريع ممتع.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🌿</div>
-        <h3 class="anime-title"><span class="en">Frieren: Beyond Journey's End</span><span class="ar">فرييرين: ما بعد نهاية الرحلة</span></h3>
-        <p>انمي يتحدث عن فانتازيا هادئة، ذكريات وحزن لطيف، رحلات جميلة، وتأمل عميق بالزمن.</p>
-      </div>
-
-      <!-- ✅ Remaining from original 50 list -->
-      <div class="feature-card"><div class="feature-icon">💣</div>
-        <h3 class="anime-title"><span class="en">The Promised Neverland</span><span class="ar">ذا بروميسد نيفرلاند</span></h3>
-        <p>انمي يتحدث عن أيتام واكتشاف صادم، هروب ذكي، توتر مستمر، وخطط عبقرية.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🧟</div>
-        <h3 class="anime-title"><span class="en">One Punch Man</span><span class="ar">ون بنش مان</span></h3>
-        <p>انمي يتحدث عن بطل يهزم بضربة، سخرية ممتعة، أكشن قوي، ورسوم مذهلة.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🎭</div>
-        <h3 class="anime-title"><span class="en">Kaguya-sama: Love is War</span><span class="ar">كاغويا-ساما: الحب حرب</span></h3>
-        <p>انمي يتحدث عن حرب ذكاء عاطفية، كوميديا رومانسية، منافسة لطيفة، ومواقف مضحكة جدًا.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🌌</div>
-        <h3 class="anime-title"><span class="en">To Your Eternity</span><span class="ar">إلى أبديتك</span></h3>
-        <p>انمي يتحدث عن كائن خالد، رحلات ومآسي، علاقات مؤثرة، ونمو عبر الزمن.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🧭</div>
-        <h3 class="anime-title"><span class="en">Mushoku Tensei</span><span class="ar">موشوكو تينسي</span></h3>
-        <p>انمي يتحدث عن حياة ثانية، سحر وتطور، أخطاء ونضج، وعالم فانتازيا واسع.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🐺</div>
-        <h3 class="anime-title"><span class="en">Spice and Wolf</span><span class="ar">سبايس أند وولف</span></h3>
-        <p>انمي يتحدث عن تجارة ومغامرة، حوار ذكي، رومانسية هادئة، وعالم اقتصادي ممتع.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🧨</div>
-        <h3 class="anime-title"><span class="en">Black Lagoon</span><span class="ar">بلاك لاجون</span></h3>
-        <p>انمي يتحدث عن عصابات ومرتزقة، أكشن واقعي، مطاردات خطيرة، وأجواء جريمة قوية.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🧊</div>
-        <h3 class="anime-title"><span class="en">Violet Evergarden</span><span class="ar">فايلت إيفرغاردن</span></h3>
-        <p>انمي يتحدث عن رسائل ومشاعر، شفاء من الحرب، جمال بصري، ودموع صادقة.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🧱</div>
-        <h3 class="anime-title"><span class="en">JoJo's Bizarre Adventure</span><span class="ar">مغامرة جوجو العجيبة</span></h3>
-        <p>انمي يتحدث عن عائلات وأجيال، قوى ستاند، أسلوب فريد، ومعارك مبتكرة جدًا.</p>
-      </div>
-
-      <div class="feature-card"><div class="feature-icon">🧠</div>
-        <h3 class="anime-title"><span class="en">Psycho-Pass (Alt)</span><span class="ar">سايكو باس (موسّع)</span></h3>
-        <p>انمي يتحدث عن تقييم نفسي آلي، صراع أخلاقي، عدالة معقدة، وأسئلة فلسفية عميقة.</p>
-      </div>
-
     </div>
   </div>
 </section>
@@ -763,8 +447,8 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
         <ul>
           <li><a href="#home">الرئيسية</a></li>
           <li><a href="#features">المميزات</a></li>
-          <li><a href="#top-anime">أقوى مسلسلات الأنمي</a></li>
           <li><a href="#download">التنزيل</a></li>
+          <!-- GOLDEN SOLUTION: link to standalone page -->
           <li><a href="/privacy-policy.html">سياسة الخصوصية</a></li>
         </ul>
       </div>
@@ -811,12 +495,15 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     dots.forEach((d,x)=>d.classList.toggle("active",x===n));
   }
 
+  // يظهر الصورة بعد التحميل (مرة واحدة)
   img.addEventListener("load", ()=>{ img.style.opacity="1"; });
 
+  // البداية
   img.src = shots[0];
   setDot(0);
   img.style.opacity="1";
 
+  // تغيير تلقائي
   setInterval(()=>{
     i=(i+1)%shots.length;
     img.style.opacity="0";
