@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>تعليمات الاستخدام - GO ANIME</title>
+<meta content="تعليمات استخدام تطبيق GO ANIME: خطوات التحميل والتثبيت، حل مشاكل التثبيت، ونصائح لتجربة مشاهدة أفضل." name="description"/>
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
+<link href="https://www.go-anime-app.com/how-to-use.html" rel="canonical"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&amp;family=Tajawal:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Cairo','Tajawal',sans-serif; line-height:1.7; color:#2C3E50; background:#fff; overflow-x:hidden; }
+a { text-decoration:none; }
+
+:root {
+  --primary-dark:#2C3E50;
+  --accent-color:#FF5252;
+  --light-bg:#F5F7FA;
+  --text-dark:#2C3E50;
+  --text-light:#fff;
+  --shadow-sm:0 2px 8px rgba(0,0,0,0.1);
+  --shadow-md:0 4px 16px rgba(0,0,0,0.15);
+  --feature-gray:#34495E;
+  --contact-gray:#34495E;
+}
+
+/* Containers */
+.container { max-width:1200px; margin:0 auto; padding:0 20px; }
+
+/* Navbar */
+.navbar { background:#fff; box-shadow:var(--shadow-sm); position:sticky; top:0; z-index:1000; }
+.nav-container { display:flex; justify-content:space-between; align-items:center; padding:15px 20px; }
+.logo-text { font-size:24px; font-weight:900; color:#34495E; }
+.nav-menu { display:flex; list-style:none; gap:30px; }
+.nav-menu a { color:var(--text-dark); font-weight:600; position:relative; }
+.nav-menu a::after { content:''; position:absolute; bottom:-5px; left:0; width:0; height:3px; background:var(--accent-color); transition:0.3s; }
+.nav-menu a:hover::after, .nav-menu a.active::after { width:100%; }
+.menu-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+.menu-toggle span { width:25px; height:3px; background:var(--primary-dark); border-radius:2px; }
+
+/* Hero */
+.hero { background:linear-gradient(135deg,#2C3E50 0%,#34495E 100%); color:#fff; padding:80px 0; }
+.hero-content { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+.hero-text h1 { font-size:48px; font-weight:900; margin-bottom:20px; line-height:1.2; }
+.hero-text p { font-size:20px; margin-bottom:35px; opacity:0.95; }
+.hero-buttons { display:flex; gap:15px; flex-wrap:wrap; }
+.btn { display:inline-flex; align-items:center; gap:10px; padding:16px 32px; font-size:18px; font-weight:700; border-radius:12px; transition:all 0.3s; cursor:pointer; border:none; }
+.btn-primary { background:#fff; color:var(--primary-dark); } 
+.btn-primary:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
+.btn-secondary { background:#fff; color:var(--primary-dark); }
+.btn-secondary:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
+
+/* Contact Bar Buttons */
+.contact-bar { padding:25px 0; text-align:center; }
+.contact-links { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
+.contact-btn {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px;
+  background: var(--contact-gray);
+  border-radius:12px;
+  box-shadow: var(--shadow-sm);
+  width:60px;
+  height:60px;
+  transition:all 0.3s;
+  border:none;
+}
+.contact-btn svg {
+  width:28px;
+  height:28px;
+  fill: #fff;
+}
+.contact-btn:hover {
+  transform:translateY(-3px);
+  box-shadow: var(--shadow-md);
+  opacity:0.9;
+}
+
+/* Features */
+.features-section { padding:80px 0; background:var(--light-bg); }
+.section-title { text-align:center; margin-bottom:60px; }
+.section-title h2 { font-size:42px; font-weight:900; color:var(--text-dark); margin-bottom:15px; }
+.features-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:40px; }
+.feature-card { background:var(--feature-gray); padding:40px 30px; border-radius:20px; text-align:center; box-shadow:var(--shadow-sm); transition:0.4s; cursor:pointer; color:#fff; }
+.feature-card:hover { transform:translateY(-10px); box-shadow:0 8px 32px rgba(0,0,0,0.2); }
+.feature-icon { width:80px; height:80px; margin:0 auto 25px; background:#fff; border-radius:20px; display:flex; align-items:center; justify-content:center; color:var(--feature-gray); font-size:36px; font-weight:bold; }
+.feature-card h3 { font-size:24px; font-weight:800; margin-bottom:15px; }
+.feature-card p { font-size:16px; line-height:1.8; }
+
+/* Download Section */
+.download-section { padding:80px 0; background:linear-gradient(135deg,#2C3E50 0%,#34495E 100%); color:#fff; text-align:center; }
+.download-content h2 { font-size:42px; font-weight:900; margin-bottom:20px; }
+.download-buttons { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
+.download-buttons .btn-primary { background:#fff; color:var(--primary-dark); }
+.download-buttons .btn-primary:hover { transform:translateY(-3px); }
+.download-buttons .btn-secondary { background:#fff; color:var(--primary-dark); }
+.download-buttons .btn-secondary:hover { transform:translateY(-3px); }
+
+/* Privacy Section (kept inside page) */
+.privacy-section { padding:80px 0; background:#fff; }
+.privacy-wrap { max-width:900px; margin:0 auto; padding:0 20px; }
+.privacy-card { background:var(--light-bg); border:1px solid #e7ecf2; padding:22px; border-radius:18px; box-shadow:var(--shadow-sm); }
+.privacy-card h2 { font-size:36px; font-weight:900; margin-bottom:10px; color:var(--text-dark); text-align:center; }
+.privacy-card .muted { color:#607080; font-size:14px; text-align:center; margin-bottom:18px; }
+.privacy-card h3 { font-size:20px; margin:18px 0 8px; }
+.privacy-card p, .privacy-card li { font-size:16px; line-height:1.9; }
+.privacy-card ul { padding:0 20px; margin:8px 0; }
+.privacy-email { color:var(--accent-color); font-weight:700; }
+.privacy-cta { display:flex; justify-content:center; margin-top:16px; }
+.privacy-cta a { background:#fff; color:var(--primary-dark); border-radius:12px; padding:12px 18px; font-weight:800; box-shadow:var(--shadow-sm); transition:0.3s; }
+.privacy-cta a:hover { transform:translateY(-2px); box-shadow:var(--shadow-md); }
+
+/* Footer */
+footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
+.footer-content { display:grid; grid-template-columns:2fr 1fr 1fr; gap:50px; margin-bottom:40px; }
+.footer-links h4 { font-size:20px; font-weight:700; margin-bottom:20px; color:#fff; }
+.footer-links ul { list-style:none; }
+.footer-links ul li { margin-bottom:12px; }
+.footer-links ul li a { color:#95A5A6; font-size:15px; transition:0.3s; }
+.footer-links ul li a:hover { color:var(--accent-color); padding-right:5px; }
+.footer-bottom { text-align:center; padding-top:30px; border-top:1px solid rgba(255,255,255,0.1); color:#95A5A6; font-size:15px; }
+
+/* Responsive */
+@media (max-width:968px) { .hero-content { grid-template-columns:1fr; gap:40px; text-align:center; } }
+@media (max-width:768px) {
+  .menu-toggle { display:flex; }
+  .nav-menu { flex-direction:column; max-height:0; overflow:hidden; transition:0.3s; }
+  .nav-menu.active { max-height:420px; }
+  .nav-menu li { border-bottom:1px solid #E0E4E8; padding:12px 0; }
+  .hero-buttons, .download-buttons { flex-direction:column; }
+  .btn { width:100%; justify-content:center; }
+  .privacy-card h2 { font-size:26px; }
+}
+@media (max-width:480px) { .hero-text h1 { font-size:28px; } .section-title h2 { font-size:26px; } .feature-card { padding:30px 20px; } }
+
+/* (Kept) screen-card styles - even if unused, per your request not to delete anything */
+.screen-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);}
+.screen-card img{width:100%;display:block;}
+.screen-card .cap{padding:8px 10px;font-size:13px;color:#607080;text-align:center;}
+
+/* ===== Screenshots title centered above phone (WEB + MOBILE) ===== */
+.screens-section{
+  padding:80px 0;
+  background:#fff;
+}
+.screens-header{
+  text-align:center;
+  margin-bottom:22px;
+}
+.screens-header h2{
+  font-size:42px;
+  font-weight:900;
+  color:var(--text-dark);
+  margin:0;
+}
+.screens-layout{
+  display:flex;
+  justify-content:center;
+}
+@media (max-width:480px){
+  .screens-header h2{ font-size:26px; }
+}
+/* ===== End screenshots title styles ===== */
+
+.phone-wrap{display:flex;justify-content:center;}
+.phone{
+  width:260px;
+  height:520px;
+  border-radius:36px;
+  background:#0f141a;
+  padding:12px;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+.phone-screen{
+  width:100%;
+  height:100%;
+  border-radius:28px;
+  overflow:hidden;
+  background:#000;
+}
+.phone-screen img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:opacity .25s ease;
+}
+
+.phone-dots{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-top:10px;
+}
+.phone-dots span{
+  width:8px;height:8px;border-radius:50%;
+  background:#cfd6df;
+}
+.phone-dots span.active{background:var(--accent-color);}
+
+@media(max-width:900px){
+  .screens-layout{grid-template-columns:1fr;}
+  .phone{margin-top:25px;}
+}
+/* ===== Top Anime Section (Grid + SEO cards) ===== */
+.anime-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:40px;
+}
+.anime-title{ margin:0 0 10px; }
+.anime-title .en{
+  display:block;
+  font-size:22px;
+  font-weight:900;
+  margin-bottom:6px;
+  direction:ltr;
+  unicode-bidi:bidi-override;
+}
+.anime-title .ar{
+  display:block;
+  font-size:16px;
+  font-weight:700;
+  color:rgba(255,255,255,0.82);
+}
+
+/* Hide icons in Top Anime cards (keep HTML clean) */
+#top-anime .feature-icon{ display:none !important; }
+
+/* Equal height cards for professional grid */
+#top-anime .feature-card{
+  display:flex;
+  flex-direction:column;
+  min-height:230px;
+  padding-top:22px;
+}
+
+/* Keep description aligned */
+#top-anime .feature-card p{
+  margin-top:8px;
+  flex-grow:1;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+/* ===== End Top Anime Section ===== */
+
+/* FAQ cards (إطار طولي) */
+.faq-card{min-height:170px}
+/* Navbar right align (RTL) */
+.nav-container{justify-content:space-between}
+.nav-menu{margin-right:auto}
+
+/* Page-specific additions */
+
+/* --- How-to-use page enhancements (same site theme) --- */
+.page-shell{padding:40px 0 10px}
+.page-card{
+  background:#ffffff;
+  border:1px solid #e6eef2;
+  border-radius:18px;
+  padding:22px 18px;
+  box-shadow:0 10px 22px rgba(0,0,0,.06);
+}
+.page-card h1{
+  margin:0 0 10px;
+  font-size:28px;
+  color:#1b2b34;
+}
+.page-card h2{
+  margin:20px 0 10px;
+  font-size:18px;
+  color:#1b2b34;
+}
+.page-card p{margin:10px 0;color:#2C3E50}
+.steps{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:14px;
+  margin-top:12px;
+}
+.step{
+  background:#ffffff;
+  border:1px solid #e6eef2;
+  border-radius:18px;
+  padding:16px;
+  box-shadow:0 10px 22px rgba(0,0,0,.05);
+  min-height:150px;
+}
+.step .num{
+  width:34px;height:34px;border-radius:12px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,#00B4D8,#0077B6);
+  color:#fff;
+  font-weight:900;
+  margin-bottom:10px;
+}
+.kb{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap:14px;
+  margin-top:12px;
+}
+.kb .box{
+  background:linear-gradient(180deg,#f7fbff,#ffffff);
+  border:1px solid #e6eef2;
+  border-radius:18px;
+  padding:16px;
+}
+.kb .box h3{margin:0 0 8px;color:#1b2b34;font-size:16px}
+.kb .box ul{margin:0;padding:0 18px 0 0}
+.kb .box li{margin:8px 0;color:#2C3E50}
+.cta-row{
+  display:flex;gap:10px;flex-wrap:wrap;
+  margin-top:14px;
+}
+.cta-row a{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:14px;
+  border:1px solid #e6eef2;
+  background:#ffffff;
+  font-weight:800;
+}
+.cta-primary{
+  background:linear-gradient(135deg,#00B4D8,#0077B6) !important;
+  color:#fff !important;
+  border-color:transparent !important;
+}
+.note{
+  margin-top:16px;
+  padding:14px 14px;
+  border-radius:16px;
+  background:linear-gradient(180deg,#f7fbff,#ffffff);
+  border:1px solid #e6eef2;
+}
+@media (max-width: 900px){
+  .steps{grid-template-columns: repeat(2, minmax(0, 1fr));}
+}
+@media (max-width: 560px){
+  .steps{grid-template-columns: 1fr;}
+  .kb{grid-template-columns: 1fr;}
+  .page-card{padding:18px 14px}
+  .page-card h1{font-size:24px}
+}
+
+</style>
+</head>
+
+<body>
+<nav class="navbar">
+<div class="nav-container">
+<a class="logo" href="#"><span class="logo-text">GO ANIME</span></a>
+<ul class="nav-menu" id="navMenu"><li><a  href="https://www.go-anime-app.com/">الرئيسية</a></li><li><a href="https://www.go-anime-app.com/#features">المميزات</a></li><li><a href="https://www.go-anime-app.com/#top-anime">أقوى مسلسلات الأنمي</a></li><li><a href="https://www.go-anime-app.com/download.html" rel="noopener" target="_blank">التنزيل</a></li><li><a href="https://www.go-anime-app.com/privacy-policy.html" rel="noopener" target="_blank">سياسة الخصوصية</a></li><li><a class="active" href="https://www.go-anime-app.com/how-to-use.html" rel="noopener" target="_blank">تعليمات الاستخدام</a></li></ul>
+<div class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</div>
+
+</nav>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content" style="max-width:900px">
+      <h1>تعليمات الاستخدام</h1>
+      <p>إرشادات واضحة لتثبيت واستخدام GO ANIME، مع حلول عملية للمشاكل الشائعة.</p>
+    </div>
+  </div>
+</section>
+
+<section class="features page-shell">
+  <div class="container">
+    
+<div class="page-card">
+  <h1>تعليمات الاستخدام</h1>
+  <p>هذه الصفحة تشرح طريقة استخدام GO ANIME خطوة بخطوة، مع نصائح لحل المشاكل الشائعة للحصول على أفضل تجربة مشاهدة.</p>
+
+  <h2>البدء السريع</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="num">1</div>
+      <h3>تحميل التطبيق</h3>
+      <p>توجه إلى صفحة التنزيل وحمّل النسخة المناسبة لجهازك.</p>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <h3>فتح التطبيق وإعداداته</h3>
+      <p>افتح التطبيق واسمح بالصلاحيات الضرورية (إن طُلبت) لتحسين الأداء وتجربة التشغيل.</p>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <h3>البحث واختيار الأنمي</h3>
+      <p>استخدم البحث أو التصنيفات للعثور على المسلسل، ثم اختر الحلقة وابدأ المشاهدة.</p>
+    </div>
+    <div class="step">
+      <div class="num">4</div>
+      <h3>المفضلة والمتابعة</h3>
+      <p>أضف الأعمال إلى المفضلة لتعود لها بسرعة، وتابع أحدث الحلقات بسهولة.</p>
+    </div>
+    <div class="step">
+      <div class="num">5</div>
+      <h3>تحسين جودة التشغيل</h3>
+      <p>اختر الجودة المناسبة حسب سرعة الإنترنت لديك لتقليل التقطيع.</p>
+    </div>
+    <div class="step">
+      <div class="num">6</div>
+      <h3>التحديثات</h3>
+      <p>احرص على تحديث التطبيق باستمرار للحصول على ميزات جديدة وإصلاحات.</p>
+    </div>
+  </div>
+
+  <h2>نصائح لتجربة أفضل</h2>
+  <div class="kb">
+    <div class="box">
+      <h3>جودة الفيديو</h3>
+      <ul>
+        <li>إذا كان الإنترنت بطيئًا: اختر جودة أقل.</li>
+        <li>إذا كان الإنترنت قويًا: ارفع الجودة للحصول على صورة أوضح.</li>
+        <li>جرّب إعادة التشغيل عند حدوث تقطيع مفاجئ.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>البحث والتنظيم</h3>
+      <ul>
+        <li>اكتب اسم الأنمي بالعربية أو الإنجليزية بحسب المتاح.</li>
+        <li>استخدم التصنيفات للوصول بسرعة (أكشن، كوميديا، شونِن...).</li>
+        <li>أضف أعمالك للمفضلة لتسهيل الرجوع لها.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>حل المشاكل الشائعة</h2>
+  <div class="kb">
+    <div class="box">
+      <h3>التطبيق لا يفتح أو يتوقف</h3>
+      <ul>
+        <li>أغلق التطبيق ثم افتحه من جديد.</li>
+        <li>تأكد من وجود مساحة كافية على الجهاز.</li>
+        <li>حدّث التطبيق لأحدث إصدار.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>تقطيع أثناء المشاهدة</h3>
+      <ul>
+        <li>بدّل إلى جودة أقل.</li>
+        <li>أعد تشغيل الراوتر أو جرّب شبكة أخرى.</li>
+        <li>أوقف التحميلات/التطبيقات التي تستهلك الإنترنت.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>الحلقة لا تعمل</h3>
+      <ul>
+        <li>جرّب سيرفر/مصدر آخر إن كان متاحًا.</li>
+        <li>أعد تحديث الصفحة داخل التطبيق أو أعد فتح الحلقة.</li>
+        <li>تأكد من تحديث التطبيق.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>لا يصلني الجديد</h3>
+      <ul>
+        <li>فعّل الإشعارات (إن كانت متاحة) من إعدادات جهازك.</li>
+        <li>تأكد أنك أضفت العمل للمفضلة/المتابعة.</li>
+        <li>تحقق من اتصال الإنترنت.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cta-row">
+    <a class="cta-primary" href="https://www.go-anime-app.com/download.html" target="_blank" rel="noopener">انتقل لصفحة التنزيل</a>
+    <a href="https://www.go-anime-app.com/privacy-policy.html" target="_blank" rel="noopener">سياسة الخصوصية</a>
+  </div>
+
+  <div class="note">
+    <strong>ملاحظة:</strong> قد تختلف بعض الخطوات بشكل بسيط حسب إصدار جهازك. إذا واجهت مشكلة مستمرة، تواصل معنا عبر القنوات الرسمية في الموقع.
+  </div>
+</div>
+
+  </div>
+</section>
+
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-brand">
+<p>أفضل تطبيق لمشاهدة مسلسلات وأفلام الأنمي المترجمة. حمل التطبيق الآن وابدأ المغامرة!</p>
+</div>
+<div class="footer-links">
+<h4>روابط سريعة</h4>
+<ul>
+<li><a href="https://www.go-anime-app.com/">الرئيسية</a></li>
+<li><a href="https://www.go-anime-app.com/#features">المميزات</a></li>
+<li><a href="https://www.go-anime-app.com/#top-anime">أقوى مسلسلات الأنمي</a></li>
+<li><a href="/download.html">التنزيل</a></li>
+<!-- GOLDEN SOLUTION: link to standalone page -->
+<li><a href="/privacy-policy.html">سياسة الخصوصية</a></li>
+</ul>
+</div>
+<div class="footer-links">
+<h4>تواصل معنا</h4>
+<ul>
+<li><a href="https://t.me/goanimeapp" target="_blank">تليجرام</a></li>
+<li><a href="https://www.instagram.com/goanimeapp" target="_blank" rel="noopener">انستجرام</a></li>
+<li><a href="https://www.facebook.com/goanimeapp" target="_blank">فيسبوك</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">© 2026 GO ANIME. جميع الحقوق محفوظة.</div>
+</div>
+</footer>
+
+<script>
+function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
+</script>
+
+</body>
+</html>
